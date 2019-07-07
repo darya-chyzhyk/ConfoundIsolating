@@ -2,17 +2,17 @@
 
 ## Confound_prediction is a Python module to control confound effect in the prediction or classification model.
 
-Any successful prediction model may be driven by a confounding effect that is correlated with the effect of interest. It is important to control that detected associations are not driven by unwanted effects. It is common issue in in neuroscience, epidemiology, economy, agriculture, etc. 
+Any successful prediction model may be driven by a confounding effect that is correlated with the effect of interest. It is important to control that detected associations are not driven by unwanted effects. It is common issue in in neuroscience, epidemiology, economy, agriculture, etc.
 
-We introduce a non-parametric approach, named **“confound-isolating cross-validation”**, to control for a confounding effect in a predictive model. It is based on crafting a test set on which the effect of interest is independent from the confounding effect. 
+We introduce a non-parametric approach, named **“confound-isolating cross-validation”**, to control for a confounding effect in a predictive model. It is based on crafting a test set on which the effect of interest is independent from the confounding effect.
 
 
-### What expect from Confound_prediction?
+### What to expect from Confound_prediction?
 
-Developed framework is based on anti mutual information sampling, a novel sampling approach to create a test set in which the effect of interest is independent from the confounding effect. The grafical illustration of classic and confound-isolating cross-validation:
+The developed framework is based on anti mutual information sampling, a novel sampling approach to create a test set in which the effect of interest is independent from the confounding effect. The graphical illustration of classic and confound-isolating cross-validation:
 
 <p align="center">
-  <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Cross_validation_classic.svg" height="300"> <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Cross_validation_confound_isolation.svg" height="300"> 
+  <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Cross_validation_classic.svg" height="300"> <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Cross_validation_confound_isolation.svg" height="300">
 </p>
 
 
@@ -34,7 +34,7 @@ Optional parameters
 * *min_sample_size* - minimum sample size to be reached, default is 10% of the data
 * *n_remove* - number of the samples to be removed on each iteration of sampling, default is 4
 * *prng* - control the pseudo random number generator, default is None
-* *cv_folds* - number of folders in the cross validation, default is 10
+* *cv_folds* - number of folds in the cross validation, default is 10
 
 **We return you**
 
@@ -86,7 +86,7 @@ python example/Example_compare_mutual_info_correlation.py
 ```
 
 <p align="center">
-  <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Example_compare_mutual_info_correlation.png" height="300"> 
+  <img src="https://github.com/darya-chyzhyk/confound_isolating_cv/blob/master/docs/Example_compare_mutual_info_correlation.png" height="300">
 </p>
 
 ## Another methods
